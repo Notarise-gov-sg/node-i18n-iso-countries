@@ -1,5 +1,6 @@
-[![Build Status](https://secure.travis-ci.org/michaelwittig/node-i18n-iso-countries.png)](http://travis-ci.org/michaelwittig/node-i18n-iso-countries)
-[![NPM version](https://badge.fury.io/js/i18n-iso-countries.png)](http://badge.fury.io/js/i18n-iso-countries)
+[![Known Vulnerabilities](https://snyk.io//test/github/notarise-gov-sg/node-i18n-iso-countries/badge.svg?targetFile=package.json)](https://snyk.io//test/github/notarise-gov-sg/node-i18n-iso-countries?targetFile=package.json)
+[![GitHub issues](https://img.shields.io/github/issues/notarise-gov-sg/node-i18n-iso-countries)](https://github.com/notarise-gov-sg/node-i18n-iso-countries/issues)
+[![License](https://img.shields.io/github/license/notarise-gov-sg/node-i18n-iso-countries)](https://github.com/Notarise-gov-sg/node-i18n-iso-countries/blob/master/LICENSE)
 
 # i18n-iso-countries
 
@@ -7,18 +8,18 @@ i18n for ISO 3166-1 country codes. We support Alpha-2, Alpha-3 and Numeric codes
 
 ## Installing
 
-Install it using npm: `npm install i18n-iso-countries`
+Install it using npm: `npm install @notarise-gov-sg/i18n-iso-countries`
 
 ```javascript
-var countries = require("i18n-iso-countries");
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
 ```
 
 If you use `i18n-iso-countries` with Node.js, you are done. If you use the package in a browser environment, you have to register the languages you want to use to minimize the file size.
 
 ```javascript
 // Support french & english languages.
-countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
-countries.registerLocale(require("i18n-iso-countries/langs/fr.json"));
+countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
+countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/fr.json"));
 ```
 
 ## Code to Country
@@ -26,8 +27,8 @@ countries.registerLocale(require("i18n-iso-countries/langs/fr.json"));
 ### Get the name of a country by its ISO 3166-1 Alpha-2, Alpha-3 or Numeric code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log("US (Alpha-2) => " + countries.getName("US", "en", {select: "official"})); // United States of America
 console.log("US (Alpha-2) => " + countries.getName("US", "de", {select: "official"})); // Vereinigte Staaten von Amerika
 console.log("USA (Alpha-3) => " + countries.getName("USA", "en", {select: "official"})); // United States of America
@@ -37,8 +38,8 @@ console.log("USA (Numeric) => " + countries.getName("840", "en", {select: "offic
 ### Get all names by their ISO 3166-1 Alpha-2 code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(countries.getNames("en", {select: "official"})); // { 'AF': 'Afghanistan', 'AL': 'Albania', [...], 'ZM': 'Zambia', 'ZW': 'Zimbabwe' }
 ```
 
@@ -139,7 +140,7 @@ console.log("LT (select: all) => " + countries.getName("LT", "en", {select: "all
 ### Get all supported languages (ISO 639-1)
 
 ```javascript
-var countries = require("i18n-iso-countries");
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
 console.log(
   "List of supported languages => " + countries.getSupportedLanguages()
 );
@@ -149,8 +150,8 @@ console.log(
 ### Country to Code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(
   "United States of America => " +
     countries.getAlpha2Code("United States of America", "en")
@@ -169,8 +170,8 @@ console.log(
 ### Convert Alpha-3 to Alpha-2 code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(
   "USA (Alpha-3) => " + countries.alpha3ToAlpha2("USA") + " (Alpha-2)"
 );
@@ -180,8 +181,8 @@ console.log(
 ### Convert Numeric to Alpha-2 code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(
   "840 (Numeric) => " + countries.numericToAlpha2("840") + " (Alpha-2)"
 );
@@ -191,8 +192,8 @@ console.log(
 ### Convert Alpha-2 to Alpha-3 code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log("DE (Alpha-2) => " + countries.alpha2ToAlpha3("DE") + " (Alpha-3)");
 // DE (Alpha-2) => DEU (Alpha-3)
 ```
@@ -200,8 +201,8 @@ console.log("DE (Alpha-2) => " + countries.alpha2ToAlpha3("DE") + " (Alpha-3)");
 ### Convert Numeric to Alpha-3 code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(
   "840 (Numeric) => " + countries.numericToAlpha3("840") + " (Alpha-3)"
 );
@@ -211,8 +212,8 @@ console.log(
 ### Convert Alpha-3 to Numeric code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(countries.alpha3ToNumeric("SWE"));
 // 752
 ```
@@ -220,8 +221,8 @@ console.log(countries.alpha3ToNumeric("SWE"));
 ### Convert Alpha-2 to Numeric code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(countries.alpha2ToNumeric("SE"));
 // 752
 ```
@@ -229,8 +230,8 @@ console.log(countries.alpha2ToNumeric("SE"));
 ### Get all Alpha-2 codes
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(countries.getAlpha2Codes());
 // { 'AF': 'AFG', 'AX': 'ALA', [...], 'ZM': 'ZMB', 'ZW': 'ZWE' }
 ```
@@ -238,8 +239,8 @@ console.log(countries.getAlpha2Codes());
 ### Get all Alpha-3 codes
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(countries.getAlpha3Codes());
 // { 'AFG': 'AF', 'ALA': 'AX', [...], 'ZMB': 'ZM', 'ZWE': 'ZW' }
 ```
@@ -247,8 +248,8 @@ console.log(countries.getAlpha3Codes());
 ### Get all Numeric codes
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(countries.getNumericCodes());
 // { '004': 'AF', '008': 'AL', [...], '887': 'YE', '894': 'ZM' }
 ```
@@ -256,8 +257,8 @@ console.log(countries.getNumericCodes());
 ### Validate country code
 
 ```javascript
-var countries = require("i18n-iso-countries");
-// in a browser environment: countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+var countries = require("@notarise-gov-sg/i18n-iso-countries");
+// in a browser environment: countries.registerLocale(require("@notarise-gov-sg/i18n-iso-countries/langs/en.json"));
 console.log(
   countries.isValid("US"),
   countries.isValid("USA"),

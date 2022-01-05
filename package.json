@@ -1,7 +1,7 @@
 {
-  "name": "i18n-iso-countries",
-  "version": "7.2.0",
-  "description": "i18n for ISO 3166-1 country codes",
+  "name": "@notarise-gov-sg/i18n-iso-countries",
+  "version": "0.0.0-development",
+  "description": "i18n for countries",
   "typings": "index.d.ts",
   "keywords": [
     "i18n",
@@ -91,10 +91,14 @@
     "zh"
   ],
   "author": {
-    "name": "Andreas Wittig",
-    "email": "me@andreaswittig.info"
+    "name": "Notarise",
+    "email": "notariseteamsg@gmail.com"
   },
   "contributors": [
+    {
+      "name": "Andreas Wittig",
+      "email": "me@andreaswittig.info"
+    },
     {
       "name": "Michael Wittig",
       "email": "post@michaelwittig.info"
@@ -111,10 +115,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelwittig/node-i18n-iso-countries.git"
+    "url": "https://github.com/Notarise-gov-sg/node-i18n-iso-countries"
   },
   "dependencies": {
-    "diacritics": "1.3.0"
+    "diacritics": "1.3.0",
+    "semantic-release": "^18.0.1"
   },
   "devDependencies": {
     "eslint": "8.3.0",
@@ -130,9 +135,13 @@
   },
   "scripts": {
     "test": "mocha test/*.js",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "semantic-release": "semantic-release"
   },
   "bugs": {
-    "url": "https://github.com/michaelwittig/node-i18n-iso-countries/issues"
+    "url": "https://github.com/Notarise-gov-sg/node-i18n-iso-countries/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
